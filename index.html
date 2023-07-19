@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <h1>Kalkulator BMI</h1>
+    <p>
+      Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk
+      tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi
+      tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator
+      BMI.
+    </p>
+    <!--Bagan Input-->
+    <div class="container-utama">
+      <form name="bmiForm" onsubmit="hitungBMI(event)">
+        <!--Jenis kelamin-->
+        <div class="container1">
+          <div>Jenis Kelamin</div>
+          <div class="field">
+            <input type="radio" id="genderPria" name="gender" required />Pria
+            <input
+              type="radio"
+              id="genderWanita"
+              name="gender"
+              required
+            />Wanita
+          </div>
+        </div>
+
+        <!--Berat Badan-->
+        <div class="container1">
+          <div><label for="berat">Berat (kg)</label></div>
+          <input class="field" type="number" name="berat" id="berat" required />
+        </div>
+
+        <!--Usia-->
+        <div class="container1">
+          <div><label for="usia">Usia (tahun)</label></div>
+          <input class="field" type="number" name="usia" id="usia" required />
+        </div>
+
+        <!--Tinggi Badan-->
+        <div class="container1">
+          <div><label for="tinggi">Tinggi badan (cm)</label></div>
+          <input
+            class="field"
+            type="number"
+            name="tinggi"
+            id="tinggi"
+            required
+          />
+        </div>
+
+        <!--Hitung BMI / Reset-->
+        <button class="tombol" id="hitung" type="submit">Hitung BMI</button>
+        <button class="tombol" id="reset" type="reset">Reset</button>
+      </form>
+    </div>
+    <br />
+
+    <!--Hasil Hitung BMI dan Kategorinya-->
+    <div class="container2">
+      <div id="bmiAnda"></div>
+      <br />
+      <div id="hasilBMI"></div>
+      <br />
+      <div id="category"></div>
+      <br />
+      <div id="rekomendasi"></div>
+      <br />
+
+      <!--Tombol Hitung Lagi-->
+      <button class="tombol" id="hitungLagi" onclick="hitungLagi()">
+        Hitung Lagi
+      </button>
+    </div>
+  </body>
+</html>
